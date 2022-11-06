@@ -1,14 +1,11 @@
-permutation([], []).
-permutation([G | O], P) :-
-    permutation(O, O1),
-    insert(G, O1, P).
-
-insert(X, L, [X | L]).
-insert(X, [G | O], [G | O1]) :-
-    insert(X, O, O1).
+perm([], []).
+perm(L,[H|T]) :-
+  append(V,[H|U],L),
+  append(V,U,W),
+  perm(W,T).
 
 race(W, G, D, B, A) :-
-    permutation([W, G, D, B, A], [1, 2, 3, 4, 5]),
+    perm([W, G, D, B, A], [1, 2, 3, 4, 5]),
     W \= 1,
     G = 3,
     D < G,
