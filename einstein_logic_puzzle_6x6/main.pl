@@ -33,7 +33,7 @@ get_solution_2(X, S) :-
 search(S1, S2) :-
     	Data = [[1,_,_,_,_,_,_],[2,_,_,_,_,_,_],[3,_,_,_,_,_,_],[4,_,_,_,_,_,_],[5,_,_,_,_,_,_],[6,_,_,_,_,_,_]],
     	enter_data(Data),
-    get_solution_1(Data, S1),
-    get_solution_2(Data, S2).
+    	get_solution_1(Data, S1),
+    	get_solution_2(Data, S2).
     
 % ?- search(S1, S2).
